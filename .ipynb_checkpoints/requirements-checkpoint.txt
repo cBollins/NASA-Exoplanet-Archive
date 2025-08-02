@@ -6,4 +6,8 @@ jupyterlab
 matplotlib
 astropy
 scipy
+kagglehub
+kaggle
 tdqm
+torch
+torchvision
