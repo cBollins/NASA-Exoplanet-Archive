@@ -43,3 +43,10 @@ filepath = "Exoplanet_Detection/exoData"
 
 path = kagglehub.dataset_download("keplersmachines/kepler-labelled-time-series-data", path=filepath)
 print("Path to dataset files:", path)
+
+# ======================================================================================================================
+# For the Kepler KOI table, it is much easier to download the table manually from the link:
+# https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative
+# -> download table
+# -> check 'values only'
+# -> download (then move from downloads folder to /Kepler_Candidates
