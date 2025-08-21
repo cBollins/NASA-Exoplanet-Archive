@@ -1,12 +1,18 @@
 # NASA Exoplanet Archive EDA
 
-An EDA exploring the properties of confirmed exoplanets using publicly available data from NASA's archive:
+An ongoing EDA exploring the properties of confirmed exoplanets using publicly available data from NASA's archive:
 
 > https://exoplanetarchive.ipac.caltech.edu/
 
-A full walkthrough of the project is given in "Project_Tour.ipynb", including how the TAS query API works within each exercise folder. 
+A full walkthrough of the project is given in `Project_Tour.ipynb`, and how each dataset was fetched in `fetch_data.py` -- including a demonstration of a query.
 
-## Exercise 1
+# Contents
+
+- Webpage Plots `/Plots_Exercise`.
+- Kepler Candidantes `/Kepler_Candidates`.
+- Exoplanet Detection `/Exoplanet_Detection`.
+
+## Webpage Plots
 
 The first exercise is simply recreating some of the plots seen on the first webpage when you follow the link above:
 1. Exolanet mass vs. orbital period
@@ -14,16 +20,14 @@ The first exercise is simply recreating some of the plots seen on the first webp
 3. Eccentricity vs. orbital period
 4. Planet density vs. planet radius
 
-<<<<<<< HEAD
-## Project Summary
-
-~
-=======
 ## Kepler Candidates
 
-This section looks at the Kepler Objects of Interest (KOI) database. After exploring the implications of various `NaN` elements, the data was cleaned and split into `X, y`. The idea is to try and predict the `koi_disposition`, or whether the readings of the exoplanet candidate indicate a "FALSE POSITIVE" or "CONFIRMED" exoplanet.
+This section looks at the Kepler Objects of Interest (KOI) database. After exploring the implications of various `NaN` elements, the data was cleaned and split using Sklearn's `train_test_split(X, y, test_size=0.2, stratify=y)`. The idea is to try and predict the `koi_disposition`, or whether the readings of the exoplanet candidate indicate a "FALSE POSITIVE" or "CONFIRMED" exoplanet. A **RandomForestClassifier** was put to the test on the numerical features included in the KOI dataset, achieving $99.3\%$ accuracy, and a perfect negative recall.
 
-## Project Summary
+## Exoplanet Detection
 
-~
->>>>>>> f269fd6b54498bdb18c46ed3f37f9f02f7d6bebb
+The goal of this section is to classify **raw** stellar lightcurves of flagged exoplanet candidates. This dataset is sourced from Kaggle, and is not up to date. Hence, this section is an introduction to the techniques and ideas used to filter and classify noisy flux readings. Additionaly, this section aims to address how to handle an **imbalanced dataset** -- both training and desting data has a *positive:negative* $\sim 1:100$. 
+
+# Project Summary
+
+...
