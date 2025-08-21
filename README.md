@@ -30,7 +30,9 @@ Discussion of each plot and its significance can be found on the individual page
 
 ## Kepler Candidates
 
-This section looks at the Kepler Objects of Interest (KOI) database. After exploring the implications of various `NaN` elements, the data was cleaned and split using Sklearn's `train_test_split(X, y, test_size=0.2, stratify=y)`. The idea is to try and predict the `koi_disposition`, or whether the readings of the exoplanet candidate indicate a "FALSE POSITIVE" or "CONFIRMED" exoplanet. A **RandomForestClassifier** was put to the test on the numerical features included in the KOI dataset, achieving $99.3\%$ accuracy, and a perfect negative recall.
+This section looks at the Kepler Objects of Interest (KOI) database. After exploring the implications of various `NaN` elements, the data was cleaned and split using Sklearn's `train_test_split(X, y, test_size=0.2, stratify=y)`. The idea is to try and predict the `koi_disposition`, or whether the readings of the exoplanet candidate indicate a "FALSE POSITIVE" or "CONFIRMED" exoplanet.
+
+A **RandomForestClassifier** was put to the test on the numerical features included in the KOI dataset, achieving 99.3\% accuracy, and a perfect negative recall.
 
 ---
 
