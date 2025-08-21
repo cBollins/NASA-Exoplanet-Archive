@@ -26,7 +26,16 @@ This section looks at the Kepler Objects of Interest (KOI) database. After explo
 
 ## Exoplanet Detection
 
-The goal of this section is to classify **raw** stellar lightcurves of flagged exoplanet candidates. This dataset is sourced from Kaggle, and is not up to date. Hence, this section is an introduction to the techniques and ideas used to filter and classify noisy flux readings. Additionaly, this section aims to address how to handle an **imbalanced dataset** -- both training and desting data has a *positive:negative* $\sim 1:100$. 
+The goal of this section is to classify **raw** stellar lightcurves of flagged exoplanet candidates. This dataset is sourced from Kaggle, and is not up to date. Hence, this section is an introduction to the techniques and ideas used to filter and classify noisy flux readings. Additionaly, this section aims to address how to handle an **imbalanced dataset** -- both training and desting data has a *positive:negative* $\sim 1:100$.
+
+Currently developing a **1D CNN** architecture to classify preprocessed light curves.
+
+Preprocessing pipeline:
+
+1. Zero-mean, unit-variance scaling across the time-domain.
+2. Fourier transform the lightcurves
+3. Savitzky Golay smoothing
+4. Log1p the smoothed frequency amplitudes 
 
 # Project Summary
 
