@@ -11,5 +11,3 @@ scipy
 kagglehub
 kaggle
 tdqm
-torch
-torchvision

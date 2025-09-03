@@ -101,3 +101,6 @@ df = pd.read_csv(io.StringIO(r.text)) # <- can print(df.head()) if need be to ch
 # save the csv
 df.to_csv("Kepler_Candidates/koi_data.csv", index=False)
 print("-> Saved Kepler_Candidates/koi_data.csv")
+
+# ======================================================================================================================
+# Timeseries Data
