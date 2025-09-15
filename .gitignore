@@ -1,5 +1,19 @@
+# python
 __pycache__/
-Exoplanet_Detection/exoData/
+*.pyc
+*.pyo
+*.pyd
+
+# venvs + ides
+.venv/
 venv/
+.idea/
+.vscode/
+
+# jupyter
+**/.ipynb_checkpoints/
+
+# data
+Exoplanet_Detection/exoData
 Plots_Exercise/plots_data.csv
 Kepler_Candidates/koi_data.csv
